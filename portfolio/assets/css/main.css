@@ -2563,3 +2563,133 @@ body > article {
     margin-top: 0;
   }
 }
+
+#h4-space {
+  display: flex;
+  justify-content: space-evenly;
+}
+.greeting {
+  color: #ff8d33;
+}
+.greeting:before {
+  content: "Bok";
+  animation: animate infinite 40s;
+}
+
+@keyframes animate {
+  0% {
+    content: "Tashi Delek";
+  }
+  5% {
+    content: "Namaste";
+  }
+  10% {
+    content: "Hello";
+  }
+  15% {
+    content: "Hola";
+  }
+  20% {
+    content: "Bonjour";
+  }
+  25% {
+    content: "Olá";
+  }
+  30% {
+    content: "Ciao";
+  }
+  35% {
+    content: "Bongu";
+  }
+  40% {
+    content: "Salut";
+  }
+  45% {
+    content: "Barev Dzez";
+  }
+  50% {
+    content: "Zdravstvuyte";
+  }
+  55% {
+    content: "Merhaba";
+  }
+  60% {
+    content: "Nǐ hǎo";
+  }
+  65% {
+    content: "Sveiki";
+  }
+  70% {
+    content: "Hallo";
+  }
+  75% {
+    content: "Geia sas";
+  }
+  80% {
+    content: "Kon'nichiwa";
+  }
+  85% {
+    content: "Yeoboseyo";
+  }
+  90% {
+    content: "Sawubona";
+  }
+  95% {
+    content: "S̄wạs̄dī";
+  }
+  100% {
+    content: "Aloha";
+  }
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  border-radius: 10px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  text-align: left;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+/* .flip-card-front {
+  color: black;
+} */
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #43b3e0;
+  border-radius: 10px;
+  font-family: sans-serif;
+  text-shadow: none;
+  font-style: normal;
+  text-align: left;
+  color: white;
+  transform: rotateY(180deg);
+}
